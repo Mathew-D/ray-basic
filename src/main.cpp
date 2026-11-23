@@ -15,14 +15,14 @@ int main()
     SetConfigFlags(FLAG_WINDOW_HIGHDPI | FLAG_WINDOW_RESIZABLE);
     InitWindow(DESIGN_W, DESIGN_H, "ray-basic");
     SetTargetFPS(60);
-
+    
     // Custom font for the widgets — load once, pass &font to withFont().
     Font uiFont = LoadFontEx("assets/font.ttf", 32, NULL, 0);
 
     // --- Widgets (same API shape as the rust-objects originals) ---
     Label title("ray-basic", 20, 20, 30);
     title.withColors(WHITE, BLACK).withBorder(GRAY, 1.0f);
-
+        
     Label counter("Clicks: 0", 20, 75, 20);
     counter.withColors(WHITE, BLACK).withBorder(GRAY, 1.0f);
 

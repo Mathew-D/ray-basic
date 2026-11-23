@@ -5,6 +5,8 @@ CXXFLAGS ?= -Wall -Wextra -O2 -g -std=c++23
 LDLIBS  := $(shell pkg-config --libs raylib)
 CINCS   := $(shell pkg-config --cflags raylib)
 
+.DEFAULT_GOAL := all
+
 TARGET  := game
 SRCS    := $(wildcard src/*.cpp)
 DEPS    := $(wildcard src/*.h)
